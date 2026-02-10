@@ -11,7 +11,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 relative reveal-up">
             <div className="mask-reveal rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.15)] relative z-10">
               <img 
-                src="https://kurevi.com/IMG_0413.png" 
+                src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200" 
                 alt="Tropical Atmosphere" 
                 className="w-full h-full object-cover img-zoom"
               />

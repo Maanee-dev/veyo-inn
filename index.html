@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,6 +41,7 @@
         font-style: italic;
       }
       
+      /* Animation: Luxury Reveal */
       .reveal-up {
         opacity: 0;
         transform: translateY(30px);
@@ -50,6 +52,7 @@
         transform: translateY(0);
       }
 
+      /* Mask Reveal */
       .mask-reveal {
         clip-path: inset(100% 0 0 0);
         transition: clip-path 1.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -58,6 +61,7 @@
         clip-path: inset(0 0 0 0);
       }
 
+      /* Image Zoom Layer */
       .img-zoom {
         transform: scale(1.1);
         transition: transform 4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -81,16 +85,15 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "lucide-react": "https://esm.sh/lucide-react@0.474.0",
-    "@google/genai": "https://esm.sh/@google/genai@0.2.1",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+    "@google/genai": "https://esm.sh/@google/genai@1.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
     <script>
       const observerOptions = { threshold: 0.1 };
       const observer = new IntersectionObserver((entries) => {
