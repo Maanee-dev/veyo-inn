@@ -3,65 +3,65 @@ import React from 'react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
+    <section className="py-24 md:py-48 lg:py-80 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-40 items-start">
           
-          <div className="lg:col-span-6 relative reveal-up">
-            <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] md:aspect-[3/2] shadow-[0_40px_80px_rgba(12,20,20,0.06)] relative z-10 bg-stone-100">
+          {/* Architectural Feature Image */}
+          <div className="lg:col-span-7 relative reveal-up">
+            <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] shadow-[0_60px_120px_-30px_rgba(0,0,0,0.08)] md:shadow-[0_120px_240px_-60px_rgba(0,0,0,0.12)] relative z-10 bg-stone-100">
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200" 
-                alt="Veyo Modern House" 
+                alt="Veyo Loft Architecture" 
                 className="w-full h-full object-cover img-zoom"
               />
               <div className="absolute inset-0 bg-[#0c1414]/5 mix-blend-multiply opacity-20 pointer-events-none" />
             </div>
             
-            <div className="absolute -top-8 -left-8 [writing-mode:vertical-rl] text-[9px] uppercase tracking-[1.5em] font-bold text-stone-200 hidden lg:block">
-              Modern • Homestay
+            <div className="absolute -top-16 -left-12 lg:-left-20 [writing-mode:vertical-rl] text-[10px] uppercase tracking-[1.5em] font-bold text-stone-200 hidden lg:block">
+              Architectural • Sanctuary
             </div>
             
-            <div className="relative md:absolute mt-6 md:mt-0 md:-bottom-12 md:left-8 lg:left-16 bg-[#0c1414] text-white p-8 md:p-10 lg:p-12 rounded-none shadow-2xl max-w-full md:max-w-[400px] z-20 overflow-hidden">
-              <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-              <span className="text-[9px] uppercase tracking-[1em] font-bold text-stone-500 block mb-6 relative z-10">Our Concept</span>
-              <p className="font-serif text-xl md:text-3xl lg:text-4xl italic leading-tight mb-8 tracking-tight relative z-10">
-                "A comfortable house in the heart of the island."
+            <div className="relative md:absolute mt-8 md:mt-0 md:-bottom-24 md:left-20 bg-[#0c1414] text-white p-8 md:p-16 rounded-none shadow-3xl max-w-full md:max-w-[480px] z-20">
+              <span className="text-[10px] uppercase tracking-[1em] font-bold text-white/30 block mb-6 md:mb-8">The Concept</span>
+              <p className="font-serif text-2xl md:text-5xl italic leading-[1.1] mb-8 md:mb-10 tracking-tight">
+                "Modern verticality in the heart of the Baa Atoll."
               </p>
-              <div className="flex items-center gap-6 relative z-10">
-                <div className="h-px w-12 bg-white/10" />
-                <span className="text-[9px] uppercase tracking-widest text-stone-400 font-bold">Veyo Inn Blog</span>
+              <div className="flex items-center gap-6">
+                <div className="h-px w-12 md:w-16 bg-white/20" />
+                <span className="text-[9px] uppercase tracking-widest text-white/40">Veyo Inn Journal</span>
               </div>
             </div>
           </div>
           
-          <div className="lg:col-span-6 space-y-10 md:space-y-12 lg:pl-12">
+          {/* Editorial Copy */}
+          <div className="lg:col-span-5 space-y-12 md:space-y-20 lg:pt-12">
             <div className="reveal-up">
-              <div className="flex items-center gap-6 mb-6 md:mb-10">
-                <div className="h-[1px] w-10 bg-stone-900" />
-                <span className="text-stone-300 text-[10px] md:text-[11px] uppercase tracking-[1.2em] font-bold block">About Veyo Inn</span>
+              <div className="flex items-center gap-6 mb-8 md:mb-12">
+                <div className="h-[1px] w-8 md:w-12 bg-stone-200" />
+                <span className="text-stone-300 text-[10px] md:text-[12px] uppercase tracking-[1.5em] font-bold block">The Story</span>
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-stone-900 leading-[0.9] tracking-tighter mb-8">
-                Your <br />
-                <span className="serif-italic text-stone-300">Home</span>
+              <h2 className="text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-stone-900 leading-[0.8] tracking-tighter mb-8 md:mb-16">
+                Beyond <br />
+                <span className="serif-italic text-stone-300">Simple</span>
               </h2>
             </div>
             
-            <div className="space-y-8 md:space-y-10 text-stone-500 text-base md:text-lg lg:text-xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
-              <p className="tracking-tight text-stone-900 font-medium">
-                Veyo Inn is a modern guest house on Fulhadhoo. Unlike old-style hotels, our house is designed like a comfortable home with plenty of space.
+            <div className="space-y-10 md:space-y-16 text-stone-500 text-base md:text-2xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
+              <p className="tracking-tight text-stone-800 font-medium">
+                Veyo Inn introduces a new paradigm of island living. Moving away from traditional beach huts, we offer a contemporary loft experience that brings urban sophistication to the tropical jungle.
               </p>
-              <p className="tracking-tight leading-relaxed opacity-70">
-                The house has two identical private rooms. Each room has its own living space and bathroom on the first floor, with the bed on the second floor. In the center of the house, there is a shared kitchen and a large dining table for all guests to use.
+              <p className="tracking-tight leading-relaxed">
+                Our architecture is defined by vertical space. Glass-walled mezzanines, floating stairs, and integrated living zones create an environment of fluid elegance. Every loft is a fully-equipped sanctuary designed for the modern traveler.
               </p>
-              
-              <div className="grid grid-cols-2 gap-6 pt-8 border-t border-stone-100">
-                <div>
-                  <h4 className="text-[9px] uppercase tracking-[0.4em] font-bold text-stone-900 mb-2">Private Room</h4>
-                  <p className="text-[9px] text-stone-400 font-bold uppercase tracking-widest leading-loose">2 Floors, Private <br/> Bath & Lounge</p>
+              <div className="pt-8 md:pt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 border-t border-stone-100">
+                <div className="space-y-2 md:space-y-4">
+                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-900">Living</span>
+                  <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">Lower-Tier Lounge & Dining</p>
                 </div>
-                <div>
-                  <h4 className="text-[9px] uppercase tracking-[0.4em] font-bold text-stone-900 mb-2">Living Space</h4>
-                  <p className="text-[9px] text-stone-400 font-bold uppercase tracking-widest leading-loose">Kitchen & <br/> Dining Area</p>
+                <div className="space-y-2 md:space-y-4">
+                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-900">Sleep</span>
+                  <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">Upper-Tier Loft Bedroom</p>
                 </div>
               </div>
             </div>
