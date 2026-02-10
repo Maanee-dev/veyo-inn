@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-8">
             <h3 className="text-4xl font-serif tracking-tighter">Veyo Inn</h3>
             <p className="text-white/40 text-sm leading-relaxed font-light max-w-xs">
-              A private homestay sanctuary on the island of Fulhadhoo. Architecture that listens to the jungle.
+              A local guest house on Fulhadhoo Island. Enjoy the jungle and the beach in a simple way.
             </p>
             <div className="flex gap-6 opacity-40 hover:opacity-100 transition-opacity">
               <Instagram size={20} />
@@ -20,33 +20,27 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="lg:col-span-2 space-y-8">
-            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Explore</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Links</h4>
             <ul className="space-y-4 text-sm font-light text-white/60">
-              <li><a href="#rooms" className="hover:text-white transition-colors">The Sanctuaries</a></li>
-              <li><a href="#experiences" className="hover:text-white transition-colors">Island Life</a></li>
-              <li><a href="#logistics" className="hover:text-white transition-colors">The Journey</a></li>
+              <li><a href="#rooms" className="hover:text-white transition-colors">Our Rooms</a></li>
+              <li><a href="#about" className="hover:text-white transition-colors">Our Story</a></li>
+              <li><a href="#experiences" className="hover:text-white transition-colors">Activities</a></li>
+              <li><a href="#logistics" className="hover:text-white transition-colors">How to Get Here</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3 space-y-8">
-            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Connect</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Contact Us</h4>
             <ul className="space-y-6 text-sm font-light text-white/60">
-              <li className="flex items-center gap-4"><MapPin size={16} /> Fulhadhoo, Baa Atoll</li>
+              <li className="flex items-center gap-4"><MapPin size={16} /> Fulhadhoo, Maldives</li>
               <li className="flex items-center gap-4"><Mail size={16} /> stay@veyoinn.com</li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
              <div className="border border-white/10 p-10 space-y-6">
-                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Stay updated</p>
-                <div className="relative">
-                  <input 
-                    type="email" 
-                    placeholder="Email address" 
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-sm focus:outline-none focus:border-white transition-colors"
-                  />
-                  <button className="absolute right-0 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-widest font-bold">Join</button>
-                </div>
+                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30 italic">Come Visit Us</p>
+                <p className="text-sm text-white/60 font-light">Experience a real local home in the heart of the Baa Atoll.</p>
              </div>
           </div>
         </div>
@@ -54,11 +48,11 @@ export const Footer: React.FC = () => {
         <div className="mt-48 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">
            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
              <p>© 2025 VEYO INN MALDIVES</p>
-             <p className="tracking-[0.4em]">DESIGNED BY <span className="text-red-500 transition-colors duration-500 hover:text-red-400">KUREVI.</span></p>
+             <p>DESIGNED BY <span className="text-red-600 font-bold">KUREVI.</span></p>
            </div>
            <div className="flex gap-12">
-             <a href="#">Privacy</a>
-             <a href="#">Terms</a>
+             <a href="#" className="hover:text-white transition-colors">Privacy</a>
+             <a href="#" className="hover:text-white transition-colors">Terms</a>
            </div>
         </div>
       </div>

@@ -4,85 +4,84 @@ import { Room, Excursion } from './types';
 export const ROOMS: Room[] = [
   {
     id: 'deluxe-garden',
-    name: 'Deluxe Garden Room',
-    category: 'Premium Sanctuary',
+    name: 'Garden Room',
+    category: 'Best Room',
     price: '95.00',
     image: 'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&q=80&w=800',
     amenities: ['AC', 'Hot Water', 'Garden View', 'King Bed', 'Free Wi-Fi'],
-    description: 'A spacious haven with direct access to our tropical garden walk. Perfect for couples seeking a quiet retreat.'
+    description: 'A large, comfortable room with a view of our green garden. Great for couples.'
   },
   {
     id: 'family-jungle-suite',
-    name: 'Family Jungle Suite',
-    category: 'Island Haven',
+    name: 'Family Room',
+    category: 'Big Room',
     price: '160.00',
     image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800',
     amenities: ['2 Bedrooms', 'Private Patio', 'Mini Fridge', 'King + Twin Beds', 'Premium Wi-Fi'],
-    description: 'Our most expansive suite, surrounded by lush jungle vines, designed specifically for family harmony and comfort.'
+    description: 'Our largest room, surrounded by trees. Perfect for families who want to stay together.'
   },
   {
     id: 'ocean-breeze-loft',
-    name: 'Ocean Breeze Loft',
-    category: 'Sky Sanctuary',
+    name: 'Sea Breeze Room',
+    category: 'Top Floor',
     price: '125.00',
     image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=800',
     amenities: ['High Ceilings', 'Panoramic Windows', 'Rain Shower', 'Work Desk', 'Nespresso'],
-    description: 'An elevated sanctuary catching the cross-breezes of the Baa Atoll lagoon. Ideal for digital nomads.'
+    description: 'A high room that gets the cool sea air. Great for people who need to work while traveling.'
   },
   {
     id: 'standard-double',
-    name: 'Standard Double Room',
-    category: 'Authentic Choice',
+    name: 'Standard Room',
+    category: 'Simple Choice',
     price: '75.00',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
     amenities: ['AC', 'En-suite Bathroom', 'Tea/Coffee', 'Safe', 'Free Wi-Fi'],
-    description: 'Cozy and comfortable, perfect for the modern traveler looking for a local touch without compromise.'
+    description: 'A cozy and clean room for travelers who want a simple place to sleep.'
   },
   {
     id: 'twin-haven',
-    name: 'Standard Twin Room',
-    category: 'Travel Buddies',
+    name: 'Twin Room',
+    category: 'Two Beds',
     price: '75.00',
     image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=800',
     amenities: ['AC', 'Two Single Beds', 'Hot Water', 'Safe', 'Free Wi-Fi'],
-    description: 'The ideal setup for friends or siblings exploring the wonders of Fulhadhoo and the Baa Atoll reefs.'
+    description: 'Two separate beds for friends or siblings who are traveling together.'
   },
   {
     id: 'solo-explorer-studio',
-    name: 'Solo Explorer Studio',
-    category: 'Solo Haven',
+    name: 'Solo Room',
+    category: 'Small Room',
     price: '55.00',
     image: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=800',
     amenities: ['Compact AC', 'Single Bed', 'En-suite Bathroom', 'Local Guide Map', 'Free Wi-Fi'],
-    description: 'Efficient and charming space for the focused explorer seeking authenticity on a budget.'
+    description: 'A small, affordable room for travelers exploring alone.'
   }
 ];
 
 export const EXCURSIONS: Excursion[] = [
   {
     id: 'hanifaru',
-    name: 'Hanifaru Bay Snorkeling',
+    name: 'Manta Ray Trip',
     image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
-    description: 'Swim with majestic Manta Rays and Whale Sharks in a UNESCO reserve.',
+    description: 'Swim with giant fish in a protected ocean area.',
     tag: 'Seasonal'
   },
   {
     id: 'sandbank',
-    name: 'Pristine Sandbank Picnic',
+    name: 'Beach Picnic',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-    description: 'Experience total isolation on a strip of pure white sand.'
+    description: 'Spend time on a tiny island made only of sand.'
   },
   {
     id: 'dolphin',
-    name: 'Sunset Dolphin Cruise',
+    name: 'Dolphin Watching',
     image: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=800',
-    description: 'Watch the sunset while playful dolphins dance around the boat.'
+    description: 'Watch dolphins jump in the ocean as the sun goes down.'
   }
 ];
 
-export const SYSTEM_PROMPT = `You are the Veyo Inn Concierge, a friendly and helpful AI assistant for a local homestay in Fulhadhoo Island, Maldives.
-Veyo Inn is located in Baa Atoll (UNESCO Biosphere Reserve).
-The name "Veyo" means vines/nature in the local language, representing the lush jungle and local roots.
-Focus on: Nature, authentic Maldivian life, budget-friendly travel, and activities like Hanifaru Bay snorkeling, sandbanks, and turtle tours.
-Tone: Warm, welcoming, informative, and island-relaxed.
-Always use local greetings like "Maruhabaa" and maintain a serene, helpful vibe.`;
+export const SYSTEM_PROMPT = `You are the Veyo Inn Help, a friendly AI for a guest house in Fulhadhoo Island, Maldives. 
+Keep your answers simple and easy to understand.
+Talk about: Nature, local life, and fun trips like snorkeling and picnics.
+Tone: Friendly and helpful. Use simple words.
+Greeting: Say "Maruhabaa" (Hello).`;

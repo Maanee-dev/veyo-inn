@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscover }) => {
           playsInline 
           className="w-full h-full object-cover opacity-40 brightness-[0.7] saturate-[0.8]"
         >
-          <source src="https://player.vimeo.com/external/394334360.sd.mp4?s=d010d80c05df1459a9394f714909a89c927c3d1b&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
+          <source src="https://Kurevi.com/IMG_0449.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0c1414]/60 via-transparent to-[#0c1414]" />
       </div>
