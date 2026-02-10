@@ -35,28 +35,28 @@ export const Hero: React.FC<HeroProps> = ({ onDiscover }) => {
         <div className="reveal-up overflow-hidden mb-6">
           <div className="flex items-center gap-6">
             <span className="text-white/40 text-[10px] md:text-[11px] uppercase tracking-[1em] font-bold block leading-none">
-              Welcome to Veyo Inn
+              A Modern Retreat
             </span>
             <div className="h-[1px] grow max-w-[80px] bg-white/10" />
           </div>
         </div>
         
-        <h1 className="text-7xl md:text-8xl lg:text-[9rem] font-serif text-white leading-[0.9] tracking-tighter mb-12 reveal-up" style={{ transitionDelay: '0.2s' }}>
-          Island <br />
-          <span className="serif-italic opacity-80 block translate-x-4 text-stone-400">Living</span>
+        <h1 className="text-7xl md:text-8xl lg:text-[10rem] font-serif text-white leading-[0.9] tracking-tighter mb-12 reveal-up" style={{ transitionDelay: '0.2s' }}>
+          Veyo <br />
+          <span className="serif-italic opacity-80 block translate-x-4 text-stone-400">Inn</span>
         </h1>
         
         <div className="reveal-up flex flex-col md:flex-row items-start md:items-end justify-between gap-10" style={{ transitionDelay: '0.4s' }}>
           <div className="max-w-md">
             <p className="text-white/40 text-sm md:text-lg font-light leading-relaxed mb-10 tracking-tight text-balance">
-              Experience modern loft living on Fulhadhoo Island. Beautiful spaces designed for simple, quiet stays in the Maldives.
+              Discover a new standard of loft living on Fulhadhoo Island. Simple, quiet, and contemporary residencies designed for the modern islander.
             </p>
             <button 
               onClick={onDiscover}
               className="group flex items-center gap-8 text-white text-[10px] md:text-[11px] uppercase tracking-[0.6em] font-bold"
             >
               <span className="relative py-2">
-                Explore The Lofts
+                Discover The Lofts
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-1000" />
               </span>
               <div className="w-12 md:w-32 h-[1px] bg-white/20 group-hover:w-48 group-hover:bg-white transition-all duration-1000" />
@@ -64,8 +64,8 @@ export const Hero: React.FC<HeroProps> = ({ onDiscover }) => {
           </div>
           
           <div className="hidden lg:flex flex-col items-end gap-3 text-white/20 text-[9px] uppercase tracking-[1em] font-bold">
-            <p>Maldives</p>
             <p>Baa Atoll</p>
+            <p>Fulhadhoo Island</p>
           </div>
         </div>
       </div>
