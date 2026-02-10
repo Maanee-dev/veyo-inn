@@ -2,66 +2,62 @@ import React from 'react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 md:py-48 lg:py-80 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-40 items-start">
+    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           
-          {/* Architectural Feature Image - The "Large Spread" */}
           <div className="lg:col-span-7 relative reveal-up">
-            <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] sm:aspect-[16/10] lg:aspect-[1.2/1] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] relative z-10 bg-stone-100">
+            <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] sm:aspect-[16/10] lg:aspect-[1.2/1] shadow-xl relative z-10 bg-stone-100">
               <img 
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200" 
-                alt="Veyo Loft Architecture" 
+                alt="Veyo Loft" 
                 className="w-full h-full object-cover img-zoom"
               />
-              <div className="absolute inset-0 bg-[#0c1414]/5 mix-blend-multiply opacity-20 pointer-events-none" />
             </div>
             
-            <div className="absolute -top-16 -left-12 lg:-left-20 [writing-mode:vertical-rl] text-[10px] uppercase tracking-[2em] font-bold text-stone-200 hidden lg:block">
-              Minimalist • Sanctuary
+            <div className="absolute -top-12 -left-12 lg:-left-16 [writing-mode:vertical-rl] text-[9px] uppercase tracking-[1em] font-bold text-stone-200 hidden lg:block">
+              Veyo Inn • Fulhadhoo
             </div>
             
-            {/* The Floating Floating Card */}
-            <div className="relative lg:absolute mt-8 lg:mt-0 lg:-bottom-24 lg:-right-12 bg-[#0c1414] text-white p-10 lg:p-16 rounded-none shadow-3xl max-w-full lg:max-w-[500px] z-20">
-              <span className="text-[10px] uppercase tracking-[1.5em] font-bold text-white/30 block mb-8">The Philosophy</span>
-              <p className="font-serif text-3xl lg:text-5xl italic leading-[1.1] mb-10 tracking-tighter">
-                "Modern verticality, island serenity."
+            <div className="relative lg:absolute mt-6 lg:mt-0 lg:-bottom-16 lg:-right-8 bg-[#0c1414] text-white p-8 lg:p-12 rounded-none shadow-2xl max-w-full lg:max-w-[420px] z-20">
+              <span className="text-[9px] uppercase tracking-[0.8em] font-bold text-white/30 block mb-6">Our Philosophy</span>
+              <p className="font-serif text-2xl lg:text-4xl italic leading-[1.2] mb-8 tracking-tight">
+                "Modern design, island peace."
               </p>
               <div className="flex items-center gap-6">
-                <div className="h-[1px] w-16 bg-white/20" />
-                <span className="text-[9px] uppercase tracking-widest text-white/40">Veyo Inn Journal</span>
+                <div className="h-[1px] w-12 bg-white/20" />
+                <span className="text-[8px] uppercase tracking-widest text-white/40">Our Story</span>
               </div>
             </div>
           </div>
           
-          {/* Editorial Copy - The "Text Column" */}
-          <div className="lg:col-span-5 space-y-16 lg:pt-12">
+          <div className="lg:col-span-5 space-y-12 lg:pt-6">
             <div className="reveal-up">
-              <div className="flex items-center gap-6 mb-12">
-                <div className="h-[1px] w-12 bg-stone-200" />
-                <span className="text-stone-300 text-[10px] md:text-[12px] uppercase tracking-[1.5em] font-bold block">The Concept</span>
+              <div className="flex items-center gap-6 mb-8">
+                <div className="h-[1px] w-8 bg-stone-200" />
+                <span className="text-stone-300 text-[10px] uppercase tracking-[0.8em] font-bold block">The Concept</span>
               </div>
-              <h2 className="text-7xl md:text-[8rem] lg:text-[10rem] font-serif text-stone-900 leading-[0.8] tracking-tighter mb-16">
-                The New <br />
-                <span className="serif-italic text-stone-300">Vertical</span>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-stone-900 leading-[0.9] tracking-tighter mb-10">
+                A New <br />
+                <span className="serif-italic text-stone-300">Space</span>
               </h2>
             </div>
             
-            <div className="space-y-12 text-stone-500 text-lg md:text-2xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
+            <div className="space-y-8 text-stone-500 text-sm md:text-lg font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
               <p className="tracking-tight text-stone-800 font-medium text-balance">
-                Veyo Inn introduces a refined loft paradigm to the Maldives. We move beyond the traditional beach hut to offer contemporary vertical living.
+                Veyo Inn offers a different way to stay in the Maldives. Our lofts give you a modern, private home on a beautiful local island.
               </p>
               <p className="tracking-tight leading-relaxed text-balance">
-                Defined by high-ceiling architecture and floating mezzanines, our spaces separate the social integrated kitchenette and marble dining from the intimate sleeping tier upstairs.
+                With two levels, our rooms keep your living space separate from where you sleep. Each loft comes with its own kitchen and laundry, making it perfect for relaxing.
               </p>
-              <div className="pt-12 grid grid-cols-2 gap-12 border-t border-stone-100">
-                <div className="space-y-4">
-                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-900">Amenities</span>
-                  <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest leading-relaxed">Integrated Kitchenette & Laundry</p>
+              <div className="pt-8 grid grid-cols-2 gap-8 border-t border-stone-100">
+                <div className="space-y-3">
+                  <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-stone-900">Living</span>
+                  <p className="text-[9px] text-stone-400 font-bold uppercase tracking-widest leading-relaxed">Private Kitchen & Laundry</p>
                 </div>
-                <div className="space-y-4">
-                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-900">Design</span>
-                  <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest leading-relaxed">Glass Mezzanine & Floating Stairs</p>
+                <div className="space-y-3">
+                  <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-stone-900">Rest</span>
+                  <p className="text-[9px] text-stone-400 font-bold uppercase tracking-widest leading-relaxed">Quiet Upper Level Bedroom</p>
                 </div>
               </div>
             </div>
