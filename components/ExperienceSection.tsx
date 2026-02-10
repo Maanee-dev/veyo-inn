@@ -1,56 +1,59 @@
+
 import React from 'react';
 import { EXCURSIONS } from '../constants';
-import { ArrowRight, Compass } from 'lucide-react';
 
 export const ExperienceSection: React.FC = () => {
   return (
-    <div className="py-32 md:py-64 px-8 md:px-24 lg:px-32 bg-white overflow-hidden border-t border-stone-50">
+    <div className="py-24 md:py-48 px-6 md:px-12 lg:px-24 bg-white border-t border-stone-50">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 md:mb-40 gap-12">
-          <div className="max-w-3xl reveal-up">
-            <span className="text-stone-300 font-bold tracking-[0.6em] uppercase text-[9px] md:text-[10px] mb-8 block">Curated Journeys</span>
-            <h2 className="text-5xl md:text-8xl font-serif text-stone-900 leading-[1.1]">The silent rhythm <br/><span className="serif-italic">of island life</span></h2>
+        {/* Fixed Responsive Header Section */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 md:gap-16 mb-20 md:mb-32">
+          <div className="w-full lg:max-w-2xl reveal-up">
+            <span className="text-stone-300 font-bold tracking-[0.6em] uppercase text-[9px] mb-4 block">Curated Journeys</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-stone-900 leading-tight">
+              The silent rhythm <br className="hidden sm:block" />
+              <span className="serif-italic text-stone-400">of island life</span>
+            </h2>
           </div>
-          <div className="flex flex-col items-start gap-10 reveal-up" style={{ transitionDelay: '0.2s' }}>
-            <p className="text-stone-400 max-w-sm text-sm md:text-lg font-light leading-relaxed">
+          <div className="w-full lg:max-w-sm flex flex-col items-start gap-8 reveal-up" style={{ transitionDelay: '0.2s' }}>
+            <p className="text-stone-400 text-sm md:text-lg font-light leading-relaxed">
               Step beyond the ordinary. Our local guides lead you to the secret corners of the Baa Atoll, from hidden sandbanks to manta sanctuaries.
             </p>
-            <button className="flex items-center gap-6 text-stone-900 font-bold text-[10px] tracking-[0.4em] uppercase group">
-              Full Activity Brochure 
-              <div className="w-10 h-px bg-stone-200 group-hover:w-16 group-hover:bg-stone-900 transition-all duration-700" />
-            </button>
+            <div className="h-px w-full bg-stone-100 hidden lg:block" />
+            <p className="text-stone-300 text-[10px] uppercase tracking-[0.4em] font-bold">UNESCO Biosphere Reserve</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-start">
+        {/* Improved Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {EXCURSIONS.map((ex, idx) => (
             <div 
               key={ex.id} 
-              className={`group cursor-pointer reveal-up ${idx === 1 ? 'md:mt-32' : idx === 2 ? 'md:mt-16' : ''}`}
-              style={{ transitionDelay: `${idx * 0.2}s` }}
+              className={`group cursor-pointer reveal-up ${idx === 1 ? 'lg:mt-16' : idx === 2 ? 'lg:mt-8' : ''}`}
+              style={{ transitionDelay: `${idx * 0.15}s` }}
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm mask-reveal shadow-sm">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mask-reveal shadow-lg">
                 <img 
                   src={ex.image} 
-                  className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-110" 
                   alt={ex.name} 
                 />
-                <div className="absolute inset-0 bg-[#121d1d]/10 group-hover:bg-transparent transition-all duration-1000" />
+                <div className="absolute inset-0 bg-[#0c1414]/20 group-hover:bg-transparent transition-all duration-1000" />
                 
                 {ex.tag && (
-                  <div className="absolute top-8 left-8 text-white/80 text-[8px] font-bold px-4 py-2 border border-white/20 uppercase tracking-[0.3em] backdrop-blur-md">
+                  <div className="absolute top-6 left-6 text-white text-[8px] font-bold px-3 py-1 bg-teal-900/40 backdrop-blur-md uppercase tracking-widest rounded-full">
                     {ex.tag}
                   </div>
                 )}
 
-                <div className="absolute bottom-10 left-10 right-10">
-                   <h3 className="text-2xl md:text-3xl font-serif text-white mb-4 transition-transform duration-700 group-hover:-translate-y-2">{ex.name}</h3>
-                   <div className="h-px w-0 bg-white/40 group-hover:w-full transition-all duration-1000" />
+                <div className="absolute bottom-8 left-8 right-8">
+                   <h3 className="text-2xl font-serif text-white mb-3 transition-transform duration-700 group-hover:-translate-y-2">{ex.name}</h3>
+                   <div className="h-[1px] w-0 bg-white/40 group-hover:w-full transition-all duration-1000" />
                 </div>
               </div>
               
-              <div className="mt-10 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0">
-                <p className="text-stone-400 text-sm font-light leading-relaxed max-w-xs">
+              <div className="mt-6 px-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 transform lg:translate-y-4 lg:group-hover:translate-y-0">
+                <p className="text-stone-400 text-sm font-light leading-relaxed">
                   {ex.description}
                 </p>
               </div>

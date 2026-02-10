@@ -6,17 +6,20 @@ import { BookingBar } from './components/BookingBar';
 import { AboutSection } from './components/AboutSection';
 import { RoomSection } from './components/RoomSection';
 import { ExperienceSection } from './components/ExperienceSection';
+import { DiningSection } from './components/DiningSection';
 import { Logistics } from './components/Logistics';
 import { Footer } from './components/Footer';
 import { ChatWidget } from './components/ChatWidget';
 import { BookingView } from './components/BookingView';
 import { RoomDetailsModal } from './components/RoomDetailsModal';
+import { BookingModal } from './components/BookingModal';
 import { Room } from './types';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [view, setView] = useState<'landing' | 'booking'>('landing');
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +29,8 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleCheckAvailability = () => {
+  const handleBookingSearch = (details: any) => {
+    console.log('Searching with details:', details);
     setView('booking');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -36,15 +40,15 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen selection:bg-teal-100 selection:text-teal-900 bg-[#fafaf9]">
-      <Navbar scrolled={scrolled || view === 'booking'} onBookNow={() => setView('booking')} />
+    <div className="relative min-h-screen selection:bg-stone-200 selection:text-stone-900 bg-[#fcfbf9]">
+      <Navbar scrolled={scrolled || view === 'booking'} onBookNow={() => setIsBookingModalOpen(true)} />
       
       <main>
         {view === 'landing' ? (
           <>
             <section id="home" className="relative">
-              <Hero onDiscover={() => setView('booking')} />
-              <BookingBar onSearch={handleCheckAvailability} />
+              <Hero onDiscover={() => setIsBookingModalOpen(true)} />
+              <BookingBar onSearch={() => setIsBookingModalOpen(true)} />
             </section>
 
             <section id="about">
@@ -53,6 +57,10 @@ function App() {
 
             <section id="rooms">
               <RoomSection onSelectRoom={handleSelectRoom} />
+            </section>
+
+            <section id="dining">
+              <DiningSection />
             </section>
 
             <section id="experiences">
@@ -82,6 +90,12 @@ function App() {
           onClose={() => setSelectedRoom(null)} 
         />
       )}
+
+      <BookingModal 
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        onSearch={handleBookingSearch}
+      />
     </div>
   );
 }

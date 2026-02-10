@@ -3,68 +3,40 @@ import React from 'react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="py-32 md:py-64 px-8 md:px-24 lg:px-32 bg-[#fdfcfb] overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-24 lg:gap-32 items-start">
-          
-          {/* Content Column */}
-          <div className="lg:col-span-5 space-y-24">
-            <div className="reveal-up space-y-12">
-              <h2 className="text-6xl md:text-8xl font-serif text-stone-900 leading-tight">
-                Welcome to <br />
-                <span className="serif-italic">our world</span>
-              </h2>
-              <div className="h-px w-32 bg-stone-100" />
-            </div>
-            
-            <div className="space-y-12 text-stone-400 text-sm md:text-lg leading-relaxed font-light max-w-sm reveal-up" style={{ transitionDelay: '0.2s' }}>
-              <p>
-                Discover the unique atmosphere of our private residential club community. Once experienced, never forgotten. This is a classic, comfortable, modern living in nature's most spectacular settings.
-              </p>
-              <p className="italic text-stone-500">
-                Flavouringly exclusive. Generously welcoming. Find your unique world—a place where families love to be, creating unforgettable moments, together.
-              </p>
-            </div>
-
-            <div className="relative pt-24 reveal-up" style={{ transitionDelay: '0.4s' }}>
-              <div className="mask-reveal rounded-sm overflow-hidden w-full md:w-[85%] aspect-[4/5] shadow-sm">
-                <img 
-                  src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Atmosphere" 
-                  className="w-full h-full object-cover img-zoom"
-                />
-              </div>
-              <div className="absolute -bottom-16 -right-12 [writing-mode:vertical-rl] text-[10px] uppercase tracking-[0.7em] font-bold text-stone-200 pointer-events-none select-none">
-                Soul & Heritage
-              </div>
-            </div>
+    <section className="py-24 md:py-48 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-32">
+        <div className="w-full lg:w-1/2 reveal-up">
+          <div className="mask-reveal rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200" 
+              alt="Atmosphere" 
+              className="w-full h-full object-cover img-zoom"
+            />
           </div>
-
-          {/* Staggered Grid Column */}
-          <div className="lg:col-span-7 relative">
-            <div className="mask-reveal aspect-[4/5] overflow-hidden rounded-sm shadow-sm" style={{ transitionDelay: '0.3s' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1500" 
-                alt="Turquoise waters" 
-                className="w-full h-full object-cover img-zoom"
-              />
-            </div>
-            
-            {/* Overlay Detail */}
-            <div className="absolute -bottom-32 -left-16 w-72 h-96 hidden lg:block reveal-up" style={{ transitionDelay: '0.6s' }}>
-              <div className="mask-reveal w-full h-full rounded-sm overflow-hidden shadow-2xl border-[24px] border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Nature details" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Decorative Seraph */}
-            <div className="absolute -top-24 -right-24 hidden lg:block select-none pointer-events-none opacity-[0.02]">
-              <span className="text-[20rem] font-serif serif-italic">Soul</span>
-            </div>
+        </div>
+        
+        <div className="w-full lg:w-1/2 space-y-10 md:space-y-16">
+          <div className="reveal-up">
+            <span className="text-stone-300 text-[10px] uppercase tracking-[0.8em] font-bold block mb-6">Our Philosophy</span>
+            <h2 className="text-4xl md:text-7xl font-serif text-stone-900 leading-[1.1]">
+              The architecture of <br />
+              <span className="serif-italic text-stone-500">quiet moments</span>
+            </h2>
+          </div>
+          
+          <div className="space-y-8 text-stone-500 text-base md:text-xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
+            <p>
+              Veyo Inn is more than a guest house. It is a commitment to the rhythm of Fulhadhoo island—a sanctuary where the vines meet the shore.
+            </p>
+            <p className="border-l-2 border-stone-100 pl-8 italic font-serif text-stone-400">
+              "We believe true luxury is found in the space between the tides, where nature remains the only architect."
+            </p>
+          </div>
+          
+          <div className="reveal-up pt-4" style={{ transitionDelay: '0.4s' }}>
+            <button className="text-[10px] uppercase tracking-[0.6em] font-bold border-b border-stone-200 pb-4 hover:border-stone-900 transition-all">
+              Discover Our Story
+            </button>
           </div>
         </div>
       </div>
