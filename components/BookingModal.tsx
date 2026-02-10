@@ -33,8 +33,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onS
         {/* Header */}
         <div className="px-10 py-12 md:px-16 md:py-16 bg-[#0c1414] text-white flex justify-between items-start">
           <div className="space-y-4">
-            <span className="text-[10px] uppercase tracking-[1em] font-bold text-white/30 block">Reservations</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-none tracking-tight italic">Sanctuary Check</h2>
+            <span className="text-[10px] uppercase tracking-[1em] font-bold text-white/30 block">Booking</span>
+            <h2 className="text-4xl md:text-5xl font-serif leading-none tracking-tight italic">Find a Room</h2>
           </div>
           <button onClick={onClose} className="p-2 text-white/30 hover:text-white transition-colors">
             <X size={32} strokeWidth={1.5} />
@@ -76,7 +76,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onS
             <div className="flex items-center justify-between border-b border-stone-50 pb-8">
               <div className="space-y-2">
                 <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-stone-900 block">Adults</span>
-                <span className="text-[11px] text-stone-400 font-light">Ages 12+</span>
+                <span className="text-[11px] text-stone-400 font-light">Age 12 or older</span>
               </div>
               <div className="flex items-center gap-8">
                 <button 
@@ -100,7 +100,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onS
             <div className="flex items-center justify-between border-b border-stone-50 pb-8">
               <div className="space-y-2">
                 <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-stone-900 block">Children</span>
-                <span className="text-[11px] text-stone-400 font-light">Ages 0-11</span>
+                <span className="text-[11px] text-stone-400 font-light">Age 11 or younger</span>
               </div>
               <div className="flex items-center gap-8">
                 <button 
@@ -126,7 +126,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onS
             type="submit"
             className="w-full bg-[#0c1414] text-white py-8 rounded-sm text-[11px] uppercase tracking-[0.8em] font-bold flex items-center justify-center gap-6 group hover:bg-stone-800 transition-all shadow-xl shadow-stone-900/10"
           >
-            Find Availability
+            Check Available Rooms
             <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </button>
         </form>
@@ -135,7 +135,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, onS
         <div className="px-16 py-10 bg-stone-50 flex items-center gap-4">
           <User size={16} className="text-stone-300" />
           <p className="text-[10px] text-stone-400 font-light tracking-widest uppercase">
-            Best local rates guaranteed for Baa Atoll residents
+            Best local prices guaranteed
           </p>
         </div>
       </div>

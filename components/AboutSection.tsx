@@ -3,40 +3,61 @@ import React from 'react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 md:py-48 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-32">
-        <div className="w-full lg:w-1/2 reveal-up">
-          <div className="mask-reveal rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200" 
-              alt="Atmosphere" 
-              className="w-full h-full object-cover img-zoom"
-            />
-          </div>
-        </div>
-        
-        <div className="w-full lg:w-1/2 space-y-10 md:space-y-16">
-          <div className="reveal-up">
-            <span className="text-stone-300 text-[10px] uppercase tracking-[0.8em] font-bold block mb-6">Our Philosophy</span>
-            <h2 className="text-4xl md:text-7xl font-serif text-stone-900 leading-[1.1]">
-              The architecture of <br />
-              <span className="serif-italic text-stone-500">quiet moments</span>
-            </h2>
+    <section className="py-32 md:py-64 px-6 md:px-12 lg:px-24 bg-[#fcfbf9] overflow-hidden">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-center">
+          
+          {/* Large Image Column */}
+          <div className="lg:col-span-7 relative reveal-up">
+            <div className="mask-reveal rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_80px_160px_-40px_rgba(0,0,0,0.15)] relative z-10">
+              <img 
+                src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200" 
+                alt="Tropical Atmosphere" 
+                className="w-full h-full object-cover img-zoom"
+              />
+            </div>
+            {/* Overlapping Subtle Label */}
+            <div className="absolute -top-12 -left-8 lg:-left-16 [writing-mode:vertical-rl] text-[9px] uppercase tracking-[1.2em] font-bold text-stone-200 hidden md:block">
+              Nature & Peace
+            </div>
+            
+            {/* Magazine Style Pull-out */}
+            <div className="absolute -bottom-16 -right-8 lg:-right-20 bg-[#0c1414] text-white p-10 md:p-14 rounded-3xl shadow-3xl hidden md:block max-w-[340px] z-20">
+              <span className="text-[9px] uppercase tracking-[0.8em] font-bold text-stone-500 block mb-6">Explore</span>
+              <p className="font-serif text-2xl italic leading-tight mb-6">"Quiet luxury is found in nature and peace."</p>
+              <div className="h-px w-12 bg-white/20" />
+            </div>
           </div>
           
-          <div className="space-y-8 text-stone-500 text-base md:text-xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
-            <p>
-              Veyo Inn is more than a guest house. It is a commitment to the rhythm of Fulhadhoo island—a sanctuary where the vines meet the shore.
-            </p>
-            <p className="border-l-2 border-stone-100 pl-8 italic font-serif text-stone-400">
-              "We believe true luxury is found in the space between the tides, where nature remains the only architect."
-            </p>
-          </div>
-          
-          <div className="reveal-up pt-4" style={{ transitionDelay: '0.4s' }}>
-            <button className="text-[10px] uppercase tracking-[0.6em] font-bold border-b border-stone-200 pb-4 hover:border-stone-900 transition-all">
-              Discover Our Story
-            </button>
+          {/* Text Content Column */}
+          <div className="lg:col-span-5 space-y-12 md:space-y-20 lg:pl-16">
+            <div className="reveal-up">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-[1px] w-8 bg-stone-200" />
+                <span className="text-stone-300 text-[10px] md:text-[12px] uppercase tracking-[1em] font-bold block">About Us</span>
+              </div>
+              <h2 className="text-6xl md:text-8xl lg:text-9xl font-serif text-stone-900 leading-[0.85] tracking-tighter">
+                Life on the <br />
+                <span className="serif-italic text-stone-400">island</span>
+              </h2>
+            </div>
+            
+            <div className="space-y-12 text-stone-500 text-base md:text-xl font-light leading-relaxed reveal-up" style={{ transitionDelay: '0.2s' }}>
+              <p className="first-letter:text-6xl md:first-letter:text-8xl first-letter:font-serif first-letter:float-left first-letter:mr-6 first-letter:text-stone-900 first-letter:leading-[0.8]">
+                Veyo Inn is a local guest house on Fulhadhoo Island. It is a place where nature meets comfort, and life moves at a relaxed pace.
+              </p>
+              <div className="h-px w-full bg-stone-100" />
+              <p className="text-stone-400 italic font-serif text-lg md:text-2xl leading-snug">
+                A simple, beautiful home in the heart of the Maldives.
+              </p>
+            </div>
+            
+            <div className="reveal-up pt-10" style={{ transitionDelay: '0.4s' }}>
+              <button className="group flex items-center gap-8 text-[11px] uppercase tracking-[0.8em] font-bold text-stone-900">
+                Read Our Story
+                <div className="w-16 h-px bg-stone-200 group-hover:w-32 group-hover:bg-stone-900 transition-all duration-1000" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

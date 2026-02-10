@@ -52,7 +52,10 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-48 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">
-           <p>© 2025 VEYO INN MALDIVES</p>
+           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
+             <p>© 2025 VEYO INN MALDIVES</p>
+             <p className="tracking-[0.4em]">DESIGNED BY <span className="text-red-500 transition-colors duration-500 hover:text-red-400">KUREVI.</span></p>
+           </div>
            <div className="flex gap-12">
              <a href="#">Privacy</a>
              <a href="#">Terms</a>
