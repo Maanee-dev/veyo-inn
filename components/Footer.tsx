@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
         <div className="mt-48 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold">
            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12">
              <p>© 2025 VEYO INN MALDIVES</p>
-             <p>DESIGNED BY <span className="text-red-600 font-bold">KUREVI.</span></p>
+             <p>POWERED BY <span className="text-red-600 font-bold">KUREVI.</span></p>
            </div>
            <div className="flex gap-12">
              <a href="#" className="hover:text-white transition-colors">Privacy</a>
