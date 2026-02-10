@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veyo Inn | Authentic Maldives Sanctuary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --lagoon-dark: #141f1f;
+        --bone-white: #fdfcfb;
+        --sand-muted: #f4f1ee;
+        --accent-muted: #8c867c;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bone-white);
+        color: var(--lagoon-dark);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Playfair Display', serif;
+        letter-spacing: -0.02em;
+        font-weight: 300;
+      }
+      .serif-italic {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+      }
+      
+      /* Animation: Editorial Reveal */
+      .reveal-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal-up.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Mask Animation */
+      .mask-reveal {
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 2.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .mask-reveal.active {
+        clip-path: inset(0 0 0 0);
+      }
+
+      /* Image Zoom */
+      .img-zoom {
+        transform: scale(1.1);
+        transition: transform 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .active .img-zoom {
+        transform: scale(1);
+      }
+
+      /* Custom luxury scrollbar */
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(20, 31, 31, 0.1);
+        border-radius: 10px;
+      }
+      
+      .overlay-luxury {
+        background: linear-gradient(to bottom, rgba(20, 31, 31, 0.2) 0%, rgba(20, 31, 31, 0) 50%, rgba(20, 31, 31, 0.6) 100%);
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, observerOptions);
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const checkReveal = () => {
+          document.querySelectorAll('.reveal-up, .mask-reveal').forEach(el => observer.observe(el));
+        };
+        checkReveal();
+        // Re-observe on view changes if needed
+        const observerMutation = new MutationObserver(checkReveal);
+        observerMutation.observe(document.body, { childList: true, subtree: true });
+      });
+    </script>
+  </body>
+</html>
