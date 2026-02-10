@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Veyo Inn | Maldives Modern Loft</title>
+    <title>Veyo Inn | Maldives Modern Loft Residency</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
       :root {
         --lagoon-dark: #0c1414;
@@ -36,7 +36,7 @@
 
       h1, h2, h3, .font-serif {
         font-family: 'Playfair Display', serif;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.03em;
         font-weight: 300;
       }
 
@@ -47,8 +47,8 @@
       
       .reveal-up {
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translateY(40px);
+        transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .reveal-up.active {
         opacity: 1;
@@ -57,26 +57,34 @@
 
       .mask-reveal {
         clip-path: inset(100% 0 0 0);
-        transition: clip-path 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: clip-path 2s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .mask-reveal.active {
         clip-path: inset(0 0 0 0);
       }
 
       .img-zoom {
-        transform: scale(1.1);
-        transition: transform 4s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: scale(1.15);
+        transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .active .img-zoom {
         transform: scale(1);
       }
 
+      /* Custom luxurious scrollbar */
       ::-webkit-scrollbar {
-        width: 4px;
+        width: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bone-white);
       }
       ::-webkit-scrollbar-thumb {
         background: var(--lagoon-dark);
-        border-radius: 10px;
+      }
+
+      /* Responsive text-balance for luxury feel */
+      .text-balance {
+        text-wrap: balance;
       }
     </style>
     <script type="importmap">
@@ -95,7 +103,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- CRITICAL: Added entry point script link -->
     <script type="module" src="./index.tsx"></script>
     <script>
       const observerOptions = { threshold: 0.1 };

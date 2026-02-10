@@ -1,109 +1,116 @@
-
 import React from 'react';
-import { Ship, Plane, Info, ExternalLink, Clock, DollarSign, CalendarCheck } from 'lucide-react';
+import { Ship, Plane, Info, Clock, DollarSign, ArrowUpRight } from 'lucide-react';
 
 export const Logistics: React.FC = () => {
   return (
-    <div className="py-20 sm:py-32 md:py-64 lg:py-80 px-6 sm:px-12 md:px-24 lg:px-32 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-16 md:mb-40 reveal-up">
-          <span className="text-stone-300 font-bold tracking-[0.6em] md:tracking-[0.8em] uppercase text-[8px] md:text-[9px] mb-6 md:mb-8 block">Travel Info</span>
-          <h2 className="text-4xl sm:text-6xl md:text-8xl font-serif text-stone-900 leading-tight">Getting to Us</h2>
-          <p className="mt-8 md:mt-12 text-stone-400 max-w-2xl text-base md:text-xl font-light leading-relaxed border-l border-stone-100 pl-8 md:pl-12">
-            Fulhadhoo is a quiet island away from the crowds. Here is how you can reach us.
-          </p>
+    <div className="py-24 md:py-48 lg:py-64 px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
+      <div className="max-w-[1600px] mx-auto">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-start mb-24 md:mb-40">
+          <div className="lg:col-span-7 reveal-up">
+            <div className="flex items-center gap-6 mb-12">
+              <span className="text-stone-300 text-[10px] md:text-[12px] uppercase tracking-[1.5em] font-bold block leading-none">Journey</span>
+              <div className="h-[1px] w-24 bg-stone-100" />
+            </div>
+            <h2 className="text-6xl md:text-[8rem] lg:text-[10rem] font-serif text-stone-900 leading-[0.8] tracking-tighter">
+              Arrival & <br />
+              <span className="serif-italic text-stone-300">Access</span>
+            </h2>
+          </div>
+          <div className="lg:col-span-5 lg:pt-16 reveal-up" style={{ transitionDelay: '0.2s' }}>
+            <p className="text-stone-400 font-light text-xl md:text-3xl leading-snug tracking-tight text-balance">
+              Fulhadhoo Island remains one of the Maldives' best-kept secrets. We offer seamless coordination to ensure your journey is as serene as your stay.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-24 mb-20 md:mb-32">
-          {/* Speedboat Card */}
-          <div className="space-y-8 md:space-y-12 reveal-up">
-            <div className="flex justify-between items-start">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-sm bg-stone-900 text-white flex items-center justify-center shadow-2xl">
-                <Ship className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          {/* Speedboat Option */}
+          <div className="group reveal-up">
+            <div className="p-10 md:p-16 border border-stone-100 bg-stone-50 rounded-none hover:bg-white hover:shadow-2xl transition-all duration-700 space-y-12">
+              <div className="flex justify-between items-start">
+                <div className="w-16 h-16 bg-[#0c1414] text-white flex items-center justify-center rounded-none shadow-2xl">
+                  <Ship size={24} strokeWidth={1} />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-stone-300">Option 01</span>
               </div>
-              <div className="text-right">
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">How Long</p>
-                <p className="text-xl md:text-2xl font-serif text-stone-900">1h 45m</p>
+              
+              <div className="space-y-6">
+                <h3 className="text-4xl font-serif text-stone-900 italic tracking-tight">Direct Speedboat</h3>
+                <p className="text-stone-400 text-lg font-light leading-relaxed">
+                  Daily departures from Malé City at 13:00. A breathtaking 105-minute voyage across the turquoise Baa Atoll.
+                </p>
               </div>
-            </div>
-            
-            <div className="space-y-4 md:space-y-6">
-              <h3 className="text-2xl md:text-3xl font-serif text-stone-900">Speedboat</h3>
-              <p className="text-stone-400 text-xs md:text-base leading-relaxed font-light">
-                Take a fast boat from Malé City directly to the island. It’s a beautiful ride across the ocean.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4 md:gap-8 pt-6 md:pt-8 border-t border-stone-50">
-              <div>
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">Leaves At</p>
-                <p className="text-xs md:text-sm font-bold text-stone-900">13:00 (Daily)</p>
-              </div>
-              <div>
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">Price</p>
-                <p className="text-xs md:text-sm font-bold text-stone-900">$50.00 per person</p>
+
+              <div className="grid grid-cols-2 gap-8 pt-10 border-t border-stone-200">
+                <div className="space-y-2">
+                  <p className="text-[9px] uppercase tracking-widest font-bold text-stone-300">Duration</p>
+                  <p className="text-stone-900 font-medium tracking-tight">1h 45m</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-[9px] uppercase tracking-widest font-bold text-stone-300">Fare</p>
+                  <p className="text-stone-900 font-medium tracking-tight">$50 USD / Way</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Domestic Card */}
-          <div className="space-y-8 md:space-y-12 reveal-up" style={{ transitionDelay: '0.2s' }}>
-            <div className="flex justify-between items-start">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-sm bg-stone-100 text-stone-900 flex items-center justify-center">
-                <Plane className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1} />
+          {/* Domestic Flight Option */}
+          <div className="group reveal-up" style={{ transitionDelay: '0.2s' }}>
+            <div className="p-10 md:p-16 border border-stone-100 bg-stone-50 rounded-none hover:bg-white hover:shadow-2xl transition-all duration-700 space-y-12">
+              <div className="flex justify-between items-start">
+                <div className="w-16 h-16 bg-white text-[#0c1414] border border-stone-100 flex items-center justify-center rounded-none shadow-xl">
+                  <Plane size={24} strokeWidth={1} />
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-stone-300">Option 02</span>
               </div>
-              <div className="text-right">
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">How Long</p>
-                <p className="text-xl md:text-2xl font-serif text-stone-900">20m Flight</p>
+              
+              <div className="space-y-6">
+                <h3 className="text-4xl font-serif text-stone-900 italic tracking-tight">Domestic Transfers</h3>
+                <p className="text-stone-400 text-lg font-light leading-relaxed">
+                  Ideal for evening arrivals. A 20-minute flight from Velana to Dharavandhoo, followed by a local boat transfer.
+                </p>
               </div>
-            </div>
-            
-            <div className="space-y-4 md:space-y-6">
-              <h3 className="text-2xl md:text-3xl font-serif text-stone-900">Domestic Flight</h3>
-              <p className="text-stone-400 text-xs md:text-base leading-relaxed font-light">
-                Fly from Malé to a nearby airport, then take a short boat ride to us. Best for late arrivals.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4 md:gap-8 pt-6 md:pt-8 border-t border-stone-50">
-              <div>
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">Flights</p>
-                <p className="text-xs md:text-sm font-bold text-stone-900">Many Daily Flights</p>
-              </div>
-              <div>
-                <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-stone-300 mb-1 md:mb-2">Pickup</p>
-                <p className="text-xs md:text-sm font-bold text-stone-900">We will meet you</p>
+
+              <div className="grid grid-cols-2 gap-8 pt-10 border-t border-stone-200">
+                <div className="space-y-2">
+                  <p className="text-[9px] uppercase tracking-widest font-bold text-stone-300">Flexibility</p>
+                  <p className="text-stone-900 font-medium tracking-tight">Daily Multiple</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-[9px] uppercase tracking-widest font-bold text-stone-300">Service</p>
+                  <p className="text-stone-900 font-medium tracking-tight">Host Pickup</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Global Compliance */}
-        <div className="bg-[#141f1f] text-white p-8 md:p-24 rounded-sm flex flex-col lg:flex-row items-center gap-12 md:gap-24 relative overflow-hidden reveal-up">
-           <div className="grow space-y-6 md:space-y-8 text-center lg:text-left">
-             <span className="text-[8px] md:text-[9px] uppercase tracking-[0.6em] md:tracking-[0.8em] font-bold text-white/20">Important</span>
-             <h4 className="text-3xl sm:text-4xl md:text-6xl font-serif leading-tight">Travel <br/>Form</h4>
-             <p className="text-white/40 text-xs md:text-lg font-light max-w-xl leading-relaxed mx-auto lg:ml-0">
-               All travelers to the Maldives must fill out the IMUGA form online before arriving.
-             </p>
-             <div className="pt-4 md:pt-6">
-               <a 
-                 href="https://imuga.immigration.gov.mv/" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 className="group inline-flex items-center gap-4 md:gap-8 bg-white text-stone-900 px-8 md:px-12 py-4 md:py-5 text-[9px] md:text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-stone-200 transition-all shadow-2xl"
-               >
-                 Fill the Form <div className="w-6 md:w-8 h-[1px] bg-stone-900/20 group-hover:w-10 md:group-hover:w-12 transition-all" />
-               </a>
-             </div>
-           </div>
-           
-           <div className="shrink-0 text-center lg:text-right space-y-4">
-             <div className="w-16 h-16 md:w-24 md:h-24 border border-white/5 rounded-full flex items-center justify-center mx-auto lg:ml-auto">
-               <Info strokeWidth={1} className="w-6 h-6 md:w-8 md:h-8 text-white/20" />
-             </div>
-             <p className="text-[7px] md:text-[8px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold text-white/20">Help</p>
-             <p className="text-lg md:text-2xl font-serif italic text-white/60">We meet you <br/>at the island</p>
+        {/* Form & Compliance - Refined */}
+        <div className="mt-24 md:mt-40 bg-[#0c1414] p-12 md:p-24 relative overflow-hidden reveal-up">
+           <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 pointer-events-none" />
+           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-16">
+              <div className="max-w-2xl space-y-8">
+                 <div className="flex items-center gap-4 text-white/30 text-[10px] uppercase tracking-[1em] font-bold">
+                    <Info size={14} /> Mandatory
+                 </div>
+                 <h4 className="text-5xl md:text-7xl font-serif text-white italic tracking-tight">IMUGA Registration</h4>
+                 <p className="text-white/40 text-lg font-light leading-relaxed">
+                    All international travelers must complete the Maldivian health declaration within 96 hours of arrival.
+                 </p>
+                 <a 
+                   href="https://imuga.immigration.gov.mv/" 
+                   target="_blank" 
+                   className="inline-flex items-center gap-6 text-white text-[11px] uppercase tracking-[0.8em] font-bold group"
+                 >
+                   Open Official Portal
+                   <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                 </a>
+              </div>
+              <div className="hidden lg:block w-[1px] h-48 bg-white/10" />
+              <div className="space-y-6">
+                 <p className="text-white/60 font-serif italic text-2xl">Concierge Support</p>
+                 <p className="text-white/20 text-sm leading-relaxed max-w-[200px]">We provide real-time WhatsApp updates for all arrivals.</p>
+              </div>
            </div>
         </div>
       </div>
