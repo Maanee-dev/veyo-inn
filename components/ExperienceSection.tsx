@@ -15,11 +15,11 @@ export const ExperienceSection: React.FC = () => {
           </div>
           <div className="w-full lg:max-w-xs flex flex-col items-start gap-8 reveal-up" style={{ transitionDelay: '0.2s' }}>
             <p className="text-stone-400 text-sm md:text-base font-light leading-relaxed">
-              We offer several trips and activities to help you enjoy your time on the island and in the ocean.
+              We offer boat trips and activities to help you enjoy the ocean and the island.
             </p>
             <div className="h-px w-16 bg-stone-100" />
             <button className="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-200 pb-3 hover:border-stone-900 transition-all">
-              View All Activities
+              See Activities
             </button>
           </div>
         </div>

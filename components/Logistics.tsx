@@ -12,13 +12,13 @@ export const Logistics: React.FC = () => {
               <div className="h-[1px] w-16 bg-stone-100" />
             </div>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-stone-900 leading-[0.9] tracking-tighter">
-              How to <br />
-              <span className="serif-italic text-stone-300">Get Here</span>
+              Getting <br />
+              <span className="serif-italic text-stone-300">Here</span>
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-8 reveal-up" style={{ transitionDelay: '0.2s' }}>
             <p className="text-stone-400 font-light text-base md:text-xl leading-snug tracking-tight text-balance">
-              Fulhadhoo Island is easy to reach from Malé. We can help coordinate your transfer so you arrive safely.
+              Fulhadhoo is easy to reach from Malé. We can help you book your boat.
             </p>
           </div>
         </div>
@@ -34,9 +34,9 @@ export const Logistics: React.FC = () => {
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-3xl font-serif text-stone-900 italic tracking-tight">Direct Speedboat</h3>
+                <h3 className="text-3xl font-serif text-stone-900 italic tracking-tight">Speedboat</h3>
                 <p className="text-stone-400 text-sm font-light leading-relaxed">
-                  Daily boats leave Malé City at 13:00. The trip takes about 1 hour and 45 minutes across the atoll.
+                  Boats leave Malé at 13:00 every day. The trip takes 1 hour and 45 minutes.
                 </p>
               </div>
 
@@ -47,7 +47,7 @@ export const Logistics: React.FC = () => {
                 </div>
                 <div className="space-y-1">
                   <p className="text-[8px] uppercase tracking-widest font-bold text-stone-300">Price</p>
-                  <p className="text-stone-900 text-sm font-medium tracking-tight">$50 USD / Way</p>
+                  <p className="text-stone-900 text-sm font-medium tracking-tight">$50 USD</p>
                 </div>
               </div>
             </div>
@@ -59,24 +59,24 @@ export const Logistics: React.FC = () => {
                 <div className="w-12 h-12 bg-white text-[#0c1414] border border-stone-100 flex items-center justify-center shadow-lg">
                   <Plane size={20} strokeWidth={1.5} />
                 </div>
-                <span className="text-[9px] font-bold uppercase tracking-widest text-stone-300">Local Flight</span>
+                <span className="text-[9px] font-bold uppercase tracking-widest text-stone-300">Flight</span>
               </div>
               
               <div className="space-y-4">
                 <h3 className="text-3xl font-serif text-stone-900 italic tracking-tight">Domestic Flight</h3>
                 <p className="text-stone-400 text-sm font-light leading-relaxed">
-                  Take a 20-minute flight to Dharavandhoo, followed by a short local boat trip. Best for late arrivals.
+                  Take a 20-minute flight to Dharavandhoo, then a short boat trip.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6 pt-8 border-t border-stone-200">
                 <div className="space-y-1">
-                  <p className="text-[8px] uppercase tracking-widest font-bold text-stone-300">Frequency</p>
-                  <p className="text-stone-900 text-sm font-medium tracking-tight">Multiple Daily</p>
+                  <p className="text-[8px] uppercase tracking-widest font-bold text-stone-300">Flight</p>
+                  <p className="text-stone-900 text-sm font-medium tracking-tight">20 mins</p>
                 </div>
                 <div className="space-y-1">
                   <p className="text-[8px] uppercase tracking-widest font-bold text-stone-300">Pickup</p>
-                  <p className="text-stone-900 text-sm font-medium tracking-tight">Available</p>
+                  <p className="text-stone-900 text-sm font-medium tracking-tight">Included</p>
                 </div>
               </div>
             </div>
@@ -88,25 +88,25 @@ export const Logistics: React.FC = () => {
            <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
               <div className="max-w-xl space-y-6">
                  <div className="flex items-center gap-3 text-white/30 text-[9px] uppercase tracking-[0.6em] font-bold">
-                    <Info size={12} /> Required
+                    <Info size={12} /> Travel Form
                  </div>
-                 <h4 className="text-4xl md:text-5xl font-serif text-white italic tracking-tight">Health Declaration</h4>
+                 <h4 className="text-4xl md:text-5xl font-serif text-white italic tracking-tight">IMUGA Form</h4>
                  <p className="text-white/40 text-sm font-light leading-relaxed">
-                    All visitors must fill out the Maldivian health form (IMUGA) within 96 hours before landing.
+                    Fill out the Maldivian health form online before you arrive.
                  </p>
                  <a 
                    href="https://imuga.immigration.gov.mv/" 
                    target="_blank" 
                    className="inline-flex items-center gap-4 text-white text-[10px] uppercase tracking-[0.4em] font-bold group"
                  >
-                   Open Form
+                   Open IMUGA
                    <ArrowUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                  </a>
               </div>
               <div className="hidden lg:block w-[1px] h-32 bg-white/10" />
               <div className="space-y-4">
-                 <p className="text-white/60 font-serif italic text-xl">Help Desk</p>
-                 <p className="text-white/20 text-xs leading-relaxed max-w-[180px]">Contact us on WhatsApp for any help with travel.</p>
+                 <p className="text-white/60 font-serif italic text-xl">Travel Help</p>
+                 <p className="text-white/20 text-xs leading-relaxed max-w-[180px]">Message us on WhatsApp if you need help getting here.</p>
               </div>
            </div>
         </div>

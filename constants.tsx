@@ -1,11 +1,11 @@
 import { Room, Excursion } from './types';
 
 const ROOM_GALLERY = [
-  'veyo4.png',
+  'https://veyoinn.com/veyo4.png',
   'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=1200',
   'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=1200',
   'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=1200',
-  'https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&q=80&w=1200'
+  'https://veyoinn.com/veyo3.png'
 ];
 
 export const ROOMS: Room[] = [
@@ -17,15 +17,15 @@ export const ROOMS: Room[] = [
     image: ROOM_GALLERY[0],
     gallery: ROOM_GALLERY,
     amenities: [
-      'Two Floors', 
-      'Full Kitchen', 
-      'Washing Machine', 
-      'Dining Area', 
-      'Glass Balcony', 
-      'Fast Wi-Fi', 
-      'Smart TV'
+      'Two Levels', 
+      'Kitchen', 
+      'Laundry', 
+      'Dining Room', 
+      'Balcony', 
+      'Wi-Fi', 
+      'TV'
     ],
-    description: 'A modern two-story loft in the heart of the island. This space features a private kitchen, a dining area, and a washing machine on the first floor. The bedroom is located upstairs for extra privacy, offering a peaceful space to rest.'
+    description: 'A modern two-story loft on Fulhadhoo. It has a kitchen, dining area, and washing machine on the first floor. The bedroom is upstairs for more privacy.'
   },
   {
     id: 'loft-02',
@@ -35,15 +35,15 @@ export const ROOMS: Room[] = [
     image: ROOM_GALLERY[4],
     gallery: ROOM_GALLERY,
     amenities: [
-      'Two Floors', 
-      'Full Kitchen', 
-      'Washing Machine', 
-      'Dining Area', 
-      'Glass Balcony', 
-      'Fast Wi-Fi', 
-      'Smart TV'
+      'Two Levels', 
+      'Kitchen', 
+      'Laundry', 
+      'Dining Room', 
+      'Balcony', 
+      'Wi-Fi', 
+      'TV'
     ],
-    description: 'A clean, minimalist loft designed for comfort. Enjoy your own kitchen and dining space downstairs, with a quiet bedroom on the upper level. Perfect for longer stays or travelers who enjoy a home-like feel.'
+    description: 'A clean and quiet loft for your stay. Enjoy your own kitchen downstairs and a peaceful bedroom on the second floor. Great for long stays.'
   }
 ];
 
@@ -51,26 +51,26 @@ export const EXCURSIONS: Excursion[] = [
   {
     id: 'hanifaru',
     name: 'Manta Rays',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
-    description: 'Swim with manta rays in the famous Hanifaru Bay.',
+    image: 'https://static.wixstatic.com/media/f67c0e_91f740b3aff14d719d4be4ddf67286a3~mv2.jpg/v1/fit/w_2500,h_1330,al_c/f67c0e_91f740b3aff14d719d4be4ddf67286a3~mv2.jpg$0',
+    description: 'Swim with manta rays in Hanifaru Bay.',
     tag: 'Baa Atoll'
   },
   {
     id: 'sandbank',
     name: 'Sandbank Trip',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-    description: 'A relaxing afternoon on a private beach in the middle of the ocean.'
+    image: 'https://islandii.com/wp-content/uploads/2025/06/fulhadhoo-sandbank.jpg',
+    description: 'Relax on a private beach in the ocean.'
   },
   {
     id: 'dolphin',
     name: 'Sunset Cruise',
-    image: 'https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=800',
-    description: 'Watch dolphins play while the sun goes down over the sea.'
+    image: 'https://canareef.com/wp-content/uploads/2023/11/Guests-taking-photos-of-dolphins-1024x503.jpg',
+    description: 'See dolphins at sunset.'
   }
 ];
 
 export const SYSTEM_PROMPT = `You are the Veyo Inn Concierge. 
 Our lofts are on Fulhadhoo Island, Baa Atoll. 
-Key Features: Two-story rooms, private kitchens, washing machines, and minimalist design. 
+Key Features: Two-story rooms, private kitchens, washing machines. 
 Tone: Friendly, simple, and professional. 
 Greeting: "Maruhabaa" (Welcome).`;

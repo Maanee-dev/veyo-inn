@@ -17,25 +17,25 @@ export const DiningSection: React.FC = () => {
             
             <div className="space-y-10 md:space-y-12 max-w-lg">
               <p className="text-white/50 text-base md:text-xl font-light leading-snug tracking-tight">
-                Every loft at Veyo Inn comes with its own kitchen and dining area. Prepare your own meals or enjoy a quiet breakfast in your private space.
+                Each loft has its own kitchen. You can cook your own meals and eat in private. Every room also has its own washing machine.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 py-8 md:py-10 border-y border-white/10">
                 <div className="space-y-3">
                   <div className="h-px w-8 bg-white/20" />
                   <h4 className="text-[9px] uppercase tracking-[0.2em] font-bold">Kitchen</h4>
-                  <p className="text-[10px] text-white/30 uppercase">Cooktop, Fridge, Microwave</p>
+                  <p className="text-[10px] text-white/30 uppercase">Fridge, Cooktop, Microwave</p>
                 </div>
                 <div className="space-y-3">
                   <div className="h-px w-8 bg-white/20" />
                   <h4 className="text-[9px] uppercase tracking-[0.2em] font-bold">Laundry</h4>
-                  <p className="text-[10px] text-white/30 uppercase">Private Washing Machine</p>
+                  <p className="text-[10px] text-white/30 uppercase">Washing Machine</p>
                 </div>
               </div>
               
               <div className="pt-4 md:pt-6">
                 <button className="group flex items-center gap-6 text-[10px] uppercase tracking-[0.6em] font-bold text-white">
-                  Learn More
+                  See Features
                   <div className="h-[1px] grow md:grow-0 md:w-16 bg-white/10 group-hover:md:w-32 group-hover:bg-white transition-all duration-1000" />
                 </button>
               </div>
@@ -46,7 +46,7 @@ export const DiningSection: React.FC = () => {
             <div className="relative">
               <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] shadow-2xl bg-white/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=1200" 
+                  src="https://veyoinn.com/veyo7.png" 
                   className="w-full h-full object-cover img-zoom brightness-75 transition-all duration-1000" 
                   alt="Kitchen Area" 
                 />

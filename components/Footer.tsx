@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Facebook, Mail, MapPin } from 'lucide-react';
 
@@ -11,7 +10,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-8">
             <h3 className="text-4xl font-serif tracking-tighter">Veyo Inn</h3>
             <p className="text-white/40 text-sm leading-relaxed font-light max-w-xs">
-              A local guest house on Fulhadhoo Island. Enjoy the jungle and the beach in a simple way.
+              A modern guest house on Fulhadhoo Island. Enjoy the beach and the jungle.
             </p>
             <div className="flex gap-6 opacity-40 hover:opacity-100 transition-opacity">
               <Instagram size={20} />
@@ -25,12 +24,12 @@ export const Footer: React.FC = () => {
               <li><a href="#rooms" className="hover:text-white transition-colors">Our Rooms</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">Our Story</a></li>
               <li><a href="#experiences" className="hover:text-white transition-colors">Activities</a></li>
-              <li><a href="#logistics" className="hover:text-white transition-colors">How to Get Here</a></li>
+              <li><a href="#logistics" className="hover:text-white transition-colors">Arrival</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3 space-y-8">
-            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Contact Us</h4>
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">Contact</h4>
             <ul className="space-y-6 text-sm font-light text-white/60">
               <li className="flex items-center gap-4"><MapPin size={16} /> Fulhadhoo, Maldives</li>
               <li className="flex items-center gap-4"><Mail size={16} /> stay@veyoinn.com</li>
@@ -39,8 +38,8 @@ export const Footer: React.FC = () => {
 
           <div className="lg:col-span-3">
              <div className="border border-white/10 p-10 space-y-6">
-                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30 italic">Come Visit Us</p>
-                <p className="text-sm text-white/60 font-light">Experience a real local home in the heart of the Baa Atoll.</p>
+                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30 italic">Visit Us</p>
+                <p className="text-sm text-white/60 font-light">Stay in a real local home in the Baa Atoll.</p>
              </div>
           </div>
         </div>
