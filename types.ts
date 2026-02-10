@@ -4,7 +4,8 @@ export interface Room {
   name: string;
   category: string;
   price: string;
-  image: string;
+  image: string; // Featured image
+  gallery: string[]; // Additional images
   amenities: string[];
   description: string;
 }
