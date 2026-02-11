@@ -9,7 +9,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 relative reveal-up">
             <div className="mask-reveal rounded-none overflow-hidden aspect-[4/5] sm:aspect-[16/10] lg:aspect-[1.2/1] shadow-xl relative z-10 bg-stone-100">
               <img 
-                src="https://KUREVI.COM/IMG_0413.png" 
+                src="https://kurevi.com/IMG_0413.png" 
                 alt="Veyo Loft" 
                 className="w-full h-full object-cover img-zoom"
               />

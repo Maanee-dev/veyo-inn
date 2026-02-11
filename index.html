@@ -49,6 +49,7 @@
         opacity: 0;
         transform: translateY(40px);
         transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
       }
       .reveal-up.active {
         opacity: 1;
@@ -56,10 +57,13 @@
       }
 
       .mask-reveal {
+        -webkit-clip-path: inset(100% 0 0 0);
         clip-path: inset(100% 0 0 0);
-        transition: clip-path 2s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: -webkit-clip-path 2s cubic-bezier(0.16, 1, 0.3, 1), clip-path 2s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: clip-path;
       }
       .mask-reveal.active {
+        -webkit-clip-path: inset(0 0 0 0);
         clip-path: inset(0 0 0 0);
       }
 
@@ -82,7 +86,6 @@
         background: var(--lagoon-dark);
       }
 
-      /* Responsive text-balance for luxury feel */
       .text-balance {
         text-wrap: balance;
       }
@@ -105,23 +108,43 @@
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
     <script>
-      const observerOptions = { threshold: 0.1 };
+      const observerOptions = { 
+        threshold: 0.05,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            observer.unobserve(entry.target);
           }
         });
       }, observerOptions);
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const checkReveal = () => {
-          document.querySelectorAll('.reveal-up, .mask-reveal').forEach(el => observer.observe(el));
-        };
-        checkReveal();
-        const observerMutation = new MutationObserver(checkReveal);
-        observerMutation.observe(document.body, { childList: true, subtree: true });
+      // Function to find new elements that need observation
+      const observeElements = () => {
+        const elements = document.querySelectorAll('.reveal-up:not(.active), .mask-reveal:not(.active)');
+        elements.forEach(el => observer.observe(el));
+      };
+
+      // Initial check
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', observeElements);
+      } else {
+        observeElements();
+      }
+
+      // Continuous monitoring for React-rendered components
+      const observerMutation = new MutationObserver((mutations) => {
+        let hasNewElements = false;
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length > 0) hasNewElements = true;
+        });
+        if (hasNewElements) observeElements();
       });
+
+      observerMutation.observe(document.body, { childList: true, subtree: true });
     </script>
   </body>
 </html>

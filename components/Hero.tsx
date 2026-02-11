@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscover }) => {
   return (
     <div className="relative h-screen w-full overflow-hidden flex flex-col justify-center px-6 md:px-12 lg:px-24 bg-[#0c1414]">
       <div 
-        className="absolute inset-0 z-0 origin-center overflow-hidden"
+        className="absolute inset-0 z-0 origin-center overflow-hidden bg-stone-900"
         style={{ transform: `scale(1.1) translateY(${offset}px)` }}
       >
         <video 
@@ -24,9 +24,10 @@ export const Hero: React.FC<HeroProps> = ({ onDiscover }) => {
           loop 
           muted 
           playsInline 
+          poster="https://veyoinn.com/veyo4.png"
           className="w-full h-full object-cover opacity-30 brightness-[0.6]"
         >
-          <source src="https://Kurevi.com/IMG_0449.mp4" type="video/mp4" />
+          <source src="https://kurevi.com/IMG_0449.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0c1414]/90 via-[#0c1414]/10 to-[#0c1414]" />
       </div>
